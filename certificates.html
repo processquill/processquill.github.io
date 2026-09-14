@@ -31,7 +31,7 @@
           <h1>Certificates that support<br><span>the work behind ProcessQuill.</span></h1>
           <p>Selected formal qualifications in GMP, quality management, auditing and pharmaceutical quality assurance. Each certificate is shown separately so clients can review the credential without a crowded collage.</p>
         </div>
-        <div class="cert-summary"><strong>6 selected credentials</strong><span>GMP · Quality Management · Audit · Pharmaceutical QA · University Training</span></div>
+        <div class="cert-summary"><strong>8 credential documents</strong><span>GMP · Quality Management · Audit · Pharmaceutical QA · University Training · Training Records</span></div>
       </div>
     </section>
 
@@ -43,6 +43,7 @@
           <button class="filter-btn" data-filter="gmp">Core GMP & Audit</button>
           <button class="filter-btn" data-filter="qa">Pharmaceutical QA</button>
           <button class="filter-btn" data-filter="university">University Training</button>
+          <button class="filter-btn" data-filter="records">Training Records</button>
         </div>
 
         <div class="certificate-grid">
@@ -76,6 +77,16 @@
             <div class="certificate-body"><span class="certificate-kicker">Pharmaceutical Industry</span><h2>Pharmaceutical Companies Foundation</h2><p>Industry-focused qualification covering the foundation and organization of pharmaceutical companies.</p><span class="view-cert">View certificate ↗</span></div>
           </article>
 
+          <article class="certificate-card" data-cat="qa records">
+            <div class="certificate-preview" data-title="Pharmaceutical Quality Assurance — Training Record"><span class="loading">Loading document…</span><img data-b64="assets/certificates/pharma-qa-training-record.b64" alt="Pharmaceutical Quality Assurance training record of Ramesh Gupta"></div>
+            <div class="certificate-body"><span class="certificate-kicker">Supporting Training Record</span><h2>Pharmaceutical Quality Assurance — Training Record</h2><p>Supporting record documenting the completed training modules behind the pharmaceutical QA specialist qualification.</p><span class="view-cert">View document ↗</span></div>
+          </article>
+
+          <article class="certificate-card" data-cat="qa records">
+            <div class="certificate-preview" data-title="Pharmaceutical Companies Foundation — Training Record"><span class="loading">Loading document…</span><img data-b64="assets/certificates/pharma-foundation-training-record.b64" alt="Pharmaceutical Companies Foundation training record of Ramesh Gupta"></div>
+            <div class="certificate-body"><span class="certificate-kicker">Supporting Training Record</span><h2>Pharmaceutical Companies Foundation — Training Record</h2><p>Supporting record showing the completed training content for the pharmaceutical-industry foundation qualification.</p><span class="view-cert">View document ↗</span></div>
+          </article>
+
           <article class="certificate-card coming" data-cat="all">
             <div class="certificate-preview"><b>Coming next</b><span>Project Management for the Pharmaceutical Industry · APV Mainz</span></div>
             <div class="certificate-body"><span class="certificate-kicker">Project Management</span><h2>APV Mainz</h2><p>The original certificate will be added once available.</p></div>
@@ -92,13 +103,15 @@
 
   <script>
     document.getElementById('certYear').textContent = new Date().getFullYear();
+    const loaded = new Map();
     async function loadCertificateImages(){
       const images = [...document.querySelectorAll('img[data-b64]')];
       await Promise.all(images.map(async img => {
         try{
           const path = img.dataset.b64;
           const b64 = await fetch(path).then(r => { if(!r.ok) throw new Error(path); return r.text(); });
-          img.src = 'data:image/webp;base64,' + b64.trim();
+          const src = 'data:image/webp;base64,' + b64.trim();
+          img.src = src; loaded.set(path, src);
           img.previousElementSibling?.remove();
         }catch(e){
           const loading = img.previousElementSibling; if(loading) loading.textContent = 'Preview unavailable';
@@ -118,7 +131,7 @@
     }));
 
     const modal = document.getElementById('certModal'), modalImage = document.getElementById('modalImage'), modalCaption = document.getElementById('modalCaption');
-    document.querySelectorAll('.certificate-preview:not(.coming .certificate-preview), .view-cert').forEach(el => el.addEventListener('click', () => {
+    document.querySelectorAll('.certificate-card:not(.coming) .certificate-preview, .certificate-card:not(.coming) .view-cert').forEach(el => el.addEventListener('click', () => {
       const card = el.closest('.certificate-card'); const preview = card.querySelector('.certificate-preview'); const img = preview.querySelector('img');
       if(!img || !img.src || !img.src.startsWith('data:')) return;
       modalImage.src = img.src; modalCaption.textContent = preview.dataset.title || card.querySelector('h2').textContent; modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
