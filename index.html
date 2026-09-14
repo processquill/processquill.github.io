@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ProcessQuill — pharmaceutical qualification, validation and GMP documentation support by Ramesh Gupta. IQ/OQ/PQ, validation reports, SOPs, risk assessments and technical documentation." />
-  <meta name="theme-color" content="#0b2238" />
+  <meta name="theme-color" content="#081d31" />
   <title>ProcessQuill | Pharmaceutical Qualification, Validation & GMP Documentation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,96 +14,150 @@
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="ProcessQuill home"><span class="brand-process">Process</span><span class="brand-quill">Quill</span></a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#about">About</a><a href="#services">Services</a><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#qualifications">Credentials</a><a href="#contact">Contact</a>
+      <a class="brand" href="#top" aria-label="ProcessQuill home"><span>Process</span><b>Quill</b></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Selected work</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
       </nav>
       <a class="nav-cta" href="#contact">Discuss a project</a>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero section-dark">
+    <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow">PHARMACEUTICAL QUALIFICATION · VALIDATION · GMP DOCUMENTATION</p>
-          <h1>Complex processes.<br><span>Clear validation logic.</span></h1>
-          <p class="hero-lead">ProcessQuill turns technical pharmaceutical information into structured, traceable GMP documentation — backed by hands-on qualification, validation, engineering and quality experience.</p>
-          <div class="hero-actions"><a class="btn btn-primary" href="#services">Explore services</a><a class="btn btn-secondary" href="#about">Meet Ramesh</a></div>
-          <div class="hero-proof"><span>IQ / OQ / PQ</span><span>Process validation</span><span>Risk assessment / FMEA</span><span>SOPs & technical reports</span></div>
-        </div>
-        <div class="hero-visual reveal delay-1" aria-hidden="true">
-          <div class="doc-stack">
-            <article class="doc-card doc-back"><div class="doc-top"><strong>FMEA</strong><span>Risk Assessment</span></div><div class="mini-table"><i></i><i></i><i></i><i></i></div></article>
-            <article class="doc-card doc-mid"><div class="doc-top"><strong>OQ</strong><span>Qualification Protocol</span></div><div class="lines"><i></i><i></i><i></i><i></i></div></article>
-            <article class="doc-card doc-front"><div class="doc-brand"><span>Process</span><b>Quill</b></div><p class="doc-kicker">QUALIFICATION REPORT</p><h2>Pre-Vacuum<br>Steam Sterilizer</h2><div class="status-grid"><div><small>Lifecycle</small><strong>IQ / OQ / PQ</strong></div><div><small>Status</small><strong>Qualified</strong></div></div><div class="doc-rule"></div><div class="doc-metrics"><span><b>3/3</b><small>PQ runs</small></span><span><b>0</b><small>Critical deviations</small></span><span><b>100%</b><small>BI acceptance</small></span></div></article>
+          <h1>GMP work that is <span>clear, traceable and built for review.</span></h1>
+          <p class="hero-lead">ProcessQuill turns complex pharmaceutical processes and technical evidence into structured qualification, validation and quality documentation — backed by hands-on engineering and GMP experience.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#services">Explore services</a>
+            <a class="btn btn-outline" href="certificates.html">View professional certificates</a>
+          </div>
+          <div class="hero-tags" aria-label="Core expertise">
+            <span>IQ / OQ / PQ</span><span>Process validation</span><span>FMEA / QRM</span><span>SOPs & reports</span><span>EN / DE</span>
           </div>
         </div>
+
+        <aside class="profile-feature reveal delay-1">
+          <div class="portrait-wrap"><img src="assets/ramesh-gupta.jpg" alt="Ramesh Gupta, pharmaceutical qualification and validation specialist" /></div>
+          <div class="profile-feature-body">
+            <p class="mini-kicker">FOUNDER · PROCESSQUILL</p>
+            <h2>Ramesh Gupta</h2>
+            <p>Pharmaceutical Qualification & Validation Specialist</p>
+            <div class="profile-proof"><span>MSc Biomedical Engineering</span><span>GMP Expert</span><span>Quality Manager & Auditor — GMP</span></div>
+            <a href="certificates.html" class="text-link">Browse verified credentials →</a>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="trust-strip"><div class="container trust-grid"><div><strong>Several years</strong><span>pharmaceutical GMP experience</span></div><div><strong>English & German</strong><span>professional technical documentation</span></div><div><strong>Risk-based</strong><span>qualification and validation strategy</span></div><div><strong>Engineering + QA</strong><span>technical depth with quality-system thinking</span></div></div></section>
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div><strong>Several years</strong><span>pharmaceutical GMP experience</span></div>
+        <div><strong>Engineering + QA</strong><span>technical depth with quality-system thinking</span></div>
+        <div><strong>Risk-based</strong><span>qualification and validation strategy</span></div>
+        <div><strong>English & German</strong><span>professional technical documentation</span></div>
+      </div>
+    </section>
 
-    <section id="about" class="section section-about">
+    <section id="about" class="section section-light">
       <div class="container about-grid">
-        <div class="about-photo-wrap reveal">
-          <div class="photo-frame"><img id="profilePhoto" src="assets/ramesh-gupta.jpg" alt="Ramesh Gupta, Pharmaceutical Qualification and Validation Specialist" /></div>
-          <div class="about-namecard"><strong>Ramesh Gupta</strong><span>Pharmaceutical Qualification & Validation Specialist</span></div>
-        </div>
-        <div class="about-copy reveal delay-1">
+        <div class="section-heading reveal">
           <p class="eyebrow">ABOUT RAMESH GUPTA</p>
           <h2>A career built where engineering, quality and GMP meet.</h2>
-          <p class="about-lead">I am a pharmaceutical qualification and validation professional with a multidisciplinary career spanning biomedical engineering, scientific work, quality control, qualification & validation engineering and GMP/QA support in Germany.</p>
-          <p>My work focuses on the point where complex technical evidence has to become a clear GMP decision. I have worked with equipment and process qualification, validation planning and reporting, sterilization, aseptic processing, sterile filtration, cleanroom/HVAC systems, risk management, deviations, CAPA, change control, SOPs and technical reports.</p>
-          <p>I combine an engineering mindset with formal GMP, quality-management and audit qualifications. That allows me to look beyond formatting: I challenge the logic of a document, connect requirements to evidence, identify gaps, define meaningful acceptance criteria and present the conclusion in a way that is practical for Production, Engineering, Validation and QA.</p>
-          <div class="about-highlights"><div><b>MSc</b><span>Biomedical Engineering</span></div><div><b>GMP</b><span>Qualification, Validation & QA</span></div><div><b>QRM</b><span>Risk Assessment & FMEA</span></div><div><b>EN / DE</b><span>Professional documentation</span></div></div>
-          <blockquote>Strong GMP documentation should make the technical decision easier to understand — not hide it behind complexity.</blockquote>
+        </div>
+        <div class="about-copy reveal delay-1">
+          <p class="lead">I am a pharmaceutical qualification and validation professional with a multidisciplinary background spanning biomedical engineering, scientific work, quality control, qualification & validation engineering and GMP/QA support in Germany.</p>
+          <p>My work focuses on the point where technical evidence has to become a defensible GMP decision. That includes equipment qualification, validation planning and reporting, sterilization, aseptic processing, sterile filtration, cleanroom/HVAC systems, risk management, deviations, CAPA, change control, SOPs and technical reports.</p>
+          <p>I combine an engineering mindset with formal GMP, quality-management and audit qualifications. I do not simply format documents: I challenge the logic, connect requirements to evidence, identify gaps and make the conclusion practical for Production, Engineering, Validation and QA.</p>
+          <div class="quote">Strong GMP documentation should make the technical decision easier to understand — not hide it behind complexity.</div>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section section-light"><div class="container"><div class="section-heading reveal"><p class="eyebrow">SERVICES</p><h2>Technical documentation that is built around the real process.</h2><p>Send me your process information, technical data, existing drafts, protocols, reports, URS or company template. I can review and improve existing documentation or develop a structured document from the evidence you provide.</p></div><div class="service-grid">
-      <article class="service-card reveal"><span class="service-no">01</span><h3>Qualification & Validation</h3><p>Protocols and reports for pharmaceutical equipment, systems and processes, with clear test logic and traceability.</p><ul><li>IQ / OQ / PQ documentation</li><li>Qualification & validation plans</li><li>Validation reports</li><li>Acceptance criteria & traceability</li><li>Deviation assessment</li></ul></article>
-      <article class="service-card reveal delay-1"><span class="service-no">02</span><h3>GMP Procedures & SOPs</h3><p>New or revised procedures built around the process, responsibilities, controls and records your team actually uses.</p><ul><li>SOPs and work instructions</li><li>Technical procedures</li><li>Document review & restructuring</li><li>Company-template adaptation</li><li>English / German documents</li></ul></article>
-      <article class="service-card reveal delay-2"><span class="service-no">03</span><h3>Quality Risk Management</h3><p>Structured risk assessments linking failure modes, process knowledge, controls, validation evidence and residual risk.</p><ul><li>FMEA / process risk assessment</li><li>Critical parameter assessment</li><li>Worst-case rationale</li><li>CAPA / deviation support</li><li>Risk-based validation strategy</li></ul></article>
-    </div></div></section>
+    <section id="services" class="section section-soft">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">SERVICES</p>
+          <h2>Specialist documentation support for regulated pharmaceutical work.</h2>
+          <p>Send your process information, technical data, drafts, protocols, reports, URS or company template. I can improve an existing document or build a structured document from the evidence you provide.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal"><div class="service-icon">01</div><h3>Qualification & Validation</h3><p>Clear protocols and reports with test logic, traceability and justified acceptance criteria.</p><ul><li>IQ / OQ / PQ documentation</li><li>Qualification & validation plans</li><li>Validation reports</li><li>URS / traceability support</li><li>Deviation assessment</li></ul></article>
+          <article class="service-card reveal delay-1"><div class="service-icon">02</div><h3>GMP Procedures & SOPs</h3><p>Procedures built around the real process, responsibilities, controls and records your team uses.</p><ul><li>SOPs and work instructions</li><li>Technical procedures</li><li>Document review & restructuring</li><li>Company-template adaptation</li><li>English / German documents</li></ul></article>
+          <article class="service-card reveal delay-2"><div class="service-icon">03</div><h3>Quality Risk Management</h3><p>Structured risk assessments that connect failure modes, process knowledge, controls and validation evidence.</p><ul><li>FMEA / process risk assessment</li><li>Critical parameter assessment</li><li>Worst-case rationale</li><li>CAPA / deviation support</li><li>Risk-based validation strategy</li></ul></article>
+        </div>
+      </div>
+    </section>
 
-    <section id="work" class="section section-muted"><div class="container"><div class="section-heading split-heading reveal"><div><p class="eyebrow">SELECTED PORTFOLIO WORK</p><h2>Different systems. The same disciplined validation approach.</h2></div><p class="note">Portfolio examples are fictional demonstration documents created specifically for ProcessQuill. They show structure, technical depth and validation logic without using confidential employer or client material.</p></div><div class="portfolio-grid">
-      <article class="portfolio-card feature reveal"><div class="portfolio-preview sterilizer-preview"><div class="preview-label">QUALIFICATION / REQUALIFICATION REPORT</div><div class="preview-title">Pre-Vacuum Steam Sterilizer</div><div class="preview-tags"><span>IQ</span><span>OQ</span><span>PQ</span><span>Thermal mapping</span></div><div class="preview-data"><b>3/3 PQ</b><b>BI challenge</b><b>Heat penetration</b></div></div><div class="portfolio-body"><p class="portfolio-type">Equipment Qualification</p><h3>Steam Sterilizer Qualification</h3><p>Leak testing, air-removal verification, empty-chamber mapping, loaded heat penetration, biological indicators, deviations and final qualified-state decision.</p><div class="chip-row"><span>Autoclave</span><span>Thermal mapping</span><span>BI</span><span>Requalification</span></div></div></article>
-      <article class="portfolio-card reveal delay-1"><div class="portfolio-preview hvac-preview"><div class="preview-label">QUALIFICATION REPORT</div><div class="preview-title">Cleanroom & HVAC System</div><div class="hvac-diagram"><i></i><i></i><i></i><i></i></div><div class="preview-data"><b>HEPA</b><b>Pressure cascade</b><b>Recovery</b></div></div><div class="portfolio-body"><p class="portfolio-type">Facility Qualification</p><h3>Cleanroom & HVAC Qualification</h3><p>HEPA integrity, airflow volume, pressure cascade, environmental setpoints, particulate classification, recovery studies and lifecycle controls.</p><div class="chip-row"><span>HEPA</span><span>HVAC</span><span>Classification</span></div></div></article>
-      <article class="portfolio-card reveal"><div class="portfolio-preview aseptic-preview"><div class="preview-label">VALIDATION REPORT</div><div class="preview-title">Aseptic Filling Line</div><div class="matrix"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="preview-data"><b>Lifecycle</b><b>Traceability</b><b>Challenge tests</b></div></div><div class="portfolio-body"><p class="portfolio-type">Process / Equipment Validation</p><h3>Aseptic Filling Validation</h3><p>Lifecycle strategy, critical parameters, challenge conditions, acceptance criteria, deviations, traceability and final validation decision.</p><div class="chip-row"><span>Aseptic processing</span><span>Validation</span><span>Traceability</span></div></div></article>
-      <article class="portfolio-card reveal delay-1"><div class="portfolio-preview fmea-preview"><div class="preview-label">QUALITY RISK MANAGEMENT</div><div class="preview-title">Process FMEA</div><div class="risk-table"><i></i><i></i><i></i><i></i><i></i></div><div class="risk-legend"><span class="r-low">Low</span><span class="r-med">Medium</span><span class="r-high">High</span></div></div><div class="portfolio-body"><p class="portfolio-type">Risk Assessment</p><h3>GMP FMEA & Risk Assessment</h3><p>Failure modes, severity / occurrence / detectability scoring, control strategy, actions, residual risk and validation linkage.</p><div class="chip-row"><span>FMEA</span><span>Residual risk</span><span>Controls</span></div></div></article>
-    </div></div></section>
+    <section id="work" class="section section-light">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">SELECTED PORTFOLIO WORK</p>
+          <h2>Different systems. The same disciplined validation approach.</h2>
+          <p class="portfolio-note">These are fictional demonstration examples created for ProcessQuill to show structure and technical depth without using confidential employer or client material.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card reveal"><div class="work-visual visual-sterilizer"><span>IQ</span><span>OQ</span><span>PQ</span><b>Steam Sterilizer</b></div><div class="work-body"><p>Equipment Qualification</p><h3>Steam Sterilizer Qualification</h3><small>Leak testing · air removal · thermal mapping · heat penetration · biological indicators · deviations</small></div></article>
+          <article class="work-card reveal delay-1"><div class="work-visual visual-hvac"><span>HEPA</span><span>∆P</span><span>Recovery</span><b>Cleanroom & HVAC</b></div><div class="work-body"><p>Facility Qualification</p><h3>Cleanroom & HVAC Qualification</h3><small>HEPA integrity · airflow · pressure cascade · classification · recovery studies · lifecycle controls</small></div></article>
+          <article class="work-card reveal"><div class="work-visual visual-aseptic"><span>Lifecycle</span><span>CPP</span><span>Traceability</span><b>Aseptic Filling</b></div><div class="work-body"><p>Process Validation</p><h3>Aseptic Filling Validation</h3><small>Critical parameters · challenge conditions · acceptance criteria · deviations · final validation decision</small></div></article>
+          <article class="work-card reveal delay-1"><div class="work-visual visual-fmea"><span>Severity</span><span>Occurrence</span><span>Detection</span><b>Process FMEA</b></div><div class="work-body"><p>Quality Risk Management</p><h3>GMP FMEA & Risk Assessment</h3><small>Failure modes · controls · actions · residual risk · validation linkage</small></div></article>
+        </div>
+      </div>
+    </section>
 
-    <section class="section section-dark process-section"><div class="container"><div class="section-heading light reveal"><p class="eyebrow">WORKING APPROACH</p><h2>From source material to a controlled GMP document.</h2></div><div class="process-grid"><div class="process-step reveal"><b>01</b><h3>Understand the scope</h3><p>Review the system, process, intended purpose, available evidence and client template.</p></div><div class="process-step reveal delay-1"><b>02</b><h3>Build the logic</h3><p>Define document structure, critical parameters, test rationale, acceptance criteria and traceability.</p></div><div class="process-step reveal delay-2"><b>03</b><h3>Draft & challenge</h3><p>Prepare the document and check technical consistency, gaps, assumptions and GMP relevance.</p></div><div class="process-step reveal delay-3"><b>04</b><h3>Finalize</h3><p>Incorporate agreed comments and deliver a clean document ready for the client's review and approval workflow.</p></div></div></div></section>
+    <section id="credentials" class="section credentials-section">
+      <div class="container credentials-grid">
+        <div class="credentials-copy reveal">
+          <p class="eyebrow">PROFESSIONAL CREDENTIALS</p>
+          <h2>Formal GMP, quality and audit qualifications — available to review.</h2>
+          <p>The certificate gallery contains each credential separately, with individual previews rather than a crowded collage.</p>
+          <a class="btn btn-primary" href="certificates.html">Open certificate gallery</a>
+        </div>
+        <div class="credential-list reveal delay-1">
+          <a href="certificates.html"><span>GMP</span><div><strong>GMP Expert</strong><small>GMP-Verlag Peither AG / Habmann Aufstiegsakademie</small></div><i>↗</i></a>
+          <a href="certificates.html"><span>QM</span><div><strong>Quality Manager & Quality Auditor — GMP</strong><small>Quality management and audit qualification</small></div><i>↗</i></a>
+          <a href="certificates.html"><span>AUD</span><div><strong>Internal Auditor</strong><small>Audit planning, execution and documentation</small></div><i>↗</i></a>
+          <a href="certificates.html"><span>QA</span><div><strong>Pharmaceutical Quality Assurance Specialist</strong><small>Sciodo AG / Habmann Aufstiegsakademie</small></div><i>↗</i></a>
+          <a href="certificates.html"><span>UNI</span><div><strong>GMP Certificate — University of Konstanz</strong><small>University-level GMP training</small></div><i>↗</i></a>
+          <a href="certificates.html"><span>PH</span><div><strong>Pharmaceutical Companies Foundation</strong><small>Pharmaceutical industry foundation qualification</small></div><i>↗</i></a>
+        </div>
+      </div>
+    </section>
 
-    <section id="experience" class="section section-light"><div class="container two-col"><div class="section-heading reveal"><p class="eyebrow">CAREER EXPERIENCE</p><h2>Built on real pharmaceutical work — not generic technical writing.</h2><p>My professional foundation combines engineering, laboratory/scientific work, quality systems and hands-on pharmaceutical qualification and validation.</p></div><div class="timeline reveal delay-1"><div class="timeline-item"><span>CURRENT FOCUS · GERMANY</span><h3>Qualification, Validation & QA</h3><p>Qualification and validation projects, risk assessments, GMP documentation, deviations, CAPA, change control, validation strategy and technical review in a pharmaceutical manufacturing environment.</p></div><div class="timeline-item"><span>QUALIFICATION & VALIDATION ENGINEERING</span><h3>Project Engineering — Qualification & Validation</h3><p>URS support, IQ/OQ test execution and documentation, PQ evaluation, deviations, technical reports, equipment qualification and inspection-facing documentation.</p></div><div class="timeline-item"><span>SCIENTIFIC & QUALITY FOUNDATION</span><h3>Scientific / Quality Control Experience</h3><p>SOP development, LIMS, analytical testing, QA support, audit preparation, CAPA and quality-management activities — creating a broad technical base for GMP work.</p></div></div></div></section>
+    <section class="section process-section">
+      <div class="container">
+        <div class="section-heading light reveal"><p class="eyebrow">HOW I WORK</p><h2>From source material to a controlled GMP document.</h2></div>
+        <div class="process-grid">
+          <div class="process-step reveal"><b>01</b><h3>Understand the scope</h3><p>Review the system, intended purpose, available evidence and client template.</p></div>
+          <div class="process-step reveal delay-1"><b>02</b><h3>Build the logic</h3><p>Define structure, critical parameters, test rationale, acceptance criteria and traceability.</p></div>
+          <div class="process-step reveal delay-2"><b>03</b><h3>Draft & challenge</h3><p>Prepare the document and check technical consistency, gaps, assumptions and GMP relevance.</p></div>
+          <div class="process-step reveal delay-3"><b>04</b><h3>Finalize</h3><p>Incorporate agreed comments and deliver a clean document ready for the approval workflow.</p></div>
+        </div>
+      </div>
+    </section>
 
-    <section id="qualifications" class="section section-muted"><div class="container"><div class="section-heading reveal"><p class="eyebrow">CERTIFICATES & PROFESSIONAL CREDENTIALS</p><h2>Formal GMP, pharmaceutical quality and audit qualifications.</h2><p>Selected credentials supporting my practical qualification, validation and QA experience.</p></div><div class="cert-grid">
-      <article class="cert reveal"><span>GMP · 2024</span><h3>GMP Expert</h3><p>GMP-Verlag Peither AG / Habmann Aufstiegsakademie<br><strong>Certificate 2024-ZK3VKMP</strong></p></article>
-      <article class="cert reveal delay-1"><span>QUALITY MANAGEMENT · 2024</span><h3>Quality Manager & Quality Auditor — GMP</h3><p>TÜV KNOW-HOW CLUB / Habmann Aufstiegsakademie<br><strong>Certificate DE-H4257</strong></p></article>
-      <article class="cert reveal delay-2"><span>AUDIT · 2024</span><h3>Internal Auditor</h3><p>Planning, execution and documentation of internal audits based on DIN EN ISO 19011:2018.<br><strong>Certificate 2024-ZK3PYB6</strong></p></article>
-      <article class="cert reveal"><span>PHARMACEUTICAL QA · 2024</span><h3>Certified Specialist in Organizing the Pharmaceutical Quality Assurance System</h3><p>Sciodo AG / Habmann Aufstiegsakademie<br><strong>Certificate 2024-CPNGZKDX33</strong></p></article>
-      <article class="cert reveal delay-1"><span>PHARMA FOUNDATION · 2024</span><h3>Pharmaceutical Companies Foundation</h3><p>Sciodo AG / Habmann Aufstiegsakademie<br><strong>Certificate 2024-C91X479G61</strong></p></article>
-      <article class="cert reveal delay-2"><span>PHARMA PROJECTS</span><h3>Project Management for the Pharmaceutical Industry</h3><p>APV Mainz<br><strong>Pharmaceutical project-management training</strong></p></article>
-    </div><p class="note" style="max-width:760px;margin-top:32px">Certificate copies and supporting documentation can be provided for professional verification when required.</p></div></section>
-
-    <section id="contact" class="section contact-section section-dark">
+    <section id="contact" class="section contact-section">
       <div class="container contact-grid">
-        <div class="contact-copy reveal"><p class="eyebrow">CONTACT PROCESSQUILL</p><h2>Have a GMP documentation challenge?</h2><p>Tell me what you are working on, which document or validation package you need, and your target timeline. A short description is enough to start.</p><a class="direct-email" href="mailto:processquill@gmail.com">processquill@gmail.com</a><div class="contact-points"><span>Qualification & validation</span><span>SOPs & technical procedures</span><span>Risk assessments & FMEA</span><span>English / German</span></div></div>
+        <div class="contact-copy reveal"><p class="eyebrow">CONTACT PROCESSQUILL</p><h2>Have a GMP documentation challenge?</h2><p>Send a short description of the project, the document you need and your timeline. I will use that information to understand the scope before the next discussion.</p><a class="email-link" href="mailto:processquill@gmail.com">processquill@gmail.com</a></div>
         <form id="contactForm" class="contact-form reveal delay-1">
-          <div class="form-row"><label>Name<input id="contactName" type="text" autocomplete="name" required></label><label>Email<input id="contactEmail" type="email" autocomplete="email" required></label></div>
-          <label>Company / organization<input id="contactCompany" type="text" autocomplete="organization"></label>
-          <label>Subject<input id="contactSubject" type="text" placeholder="e.g. OQ protocol review" required></label>
-          <label>Project message<textarea id="contactMessage" rows="6" placeholder="Briefly describe the equipment/process, document needed and target date." required></textarea></label>
-          <button class="btn btn-primary contact-submit" type="submit">Write to ProcessQuill</button>
-          <p class="form-note">The button prepares an email to processquill@gmail.com in your email application. The website does not store your message or personal data.</p>
+          <div class="form-row"><label>Name<input id="contactName" type="text" required></label><label>Email<input id="contactEmail" type="email" required></label></div>
+          <label>Company / organization<input id="contactCompany" type="text"></label>
+          <label>Project type<select id="contactSubject"><option>Qualification & Validation</option><option>GMP SOP / Procedure</option><option>Risk Assessment / FMEA</option><option>Document Review</option><option>Other</option></select></label>
+          <label>Project summary<textarea id="contactMessage" rows="6" required placeholder="Briefly describe the process, document and timeline."></textarea></label>
+          <button class="btn btn-primary contact-submit" type="submit">Prepare email</button>
+          <p class="form-note">This free GitHub Pages site opens your email application with the message pre-filled. You can also email ProcessQuill directly.</p>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="container footer-wrap"><div><span class="brand-process">Process</span><span class="brand-quill">Quill</span></div><p>Pharmaceutical Qualification, Validation & GMP Documentation</p><p>© <span id="year"></span> ProcessQuill</p></div></footer>
+  <footer class="footer"><div class="container footer-wrap"><a class="brand footer-brand" href="#top"><span>Process</span><b>Quill</b></a><p>Pharmaceutical Qualification, Validation & GMP Documentation</p><p>© <span id="year"></span> ProcessQuill</p></div></footer>
   <script src="script.js"></script>
 </body>
 </html>
