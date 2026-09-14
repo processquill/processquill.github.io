@@ -7,21 +7,12 @@ const io = new IntersectionObserver(entries => {
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-async function loadProfilePhoto(){
-  const img = document.getElementById('profilePhoto');
-  if(!img) return;
-  try{
-    const base64 = await fetch('assets/profile.txt').then(r => {
-      if(!r.ok) throw new Error('Photo asset unavailable');
-      return r.text();
-    });
-    img.src = 'data:image/jpeg;base64,' + base64.trim();
-    img.onload = () => img.classList.add('loaded');
-  }catch(err){
-    console.warn('Profile photo could not be loaded.', err);
-  }
+const profilePhoto = document.getElementById('profilePhoto');
+if (profilePhoto) {
+  const showPhoto = () => profilePhoto.classList.add('loaded');
+  if (profilePhoto.complete) showPhoto();
+  else profilePhoto.addEventListener('load', showPhoto, {once:true});
 }
-loadProfilePhoto();
 
 const form = document.getElementById('contactForm');
 if(form){
@@ -33,15 +24,15 @@ if(form){
     const subject = document.getElementById('contactSubject').value.trim();
     const message = document.getElementById('contactMessage').value.trim();
     const body = [
-      `Hello Ramesh,`,
-      ``,
+      'Hello Ramesh,',
+      '',
       message,
-      ``,
+      '',
       `Name: ${name}`,
       `Email: ${email}`,
       company ? `Company / organization: ${company}` : '',
-      ``,
-      `Sent from the ProcessQuill website.`
+      '',
+      'Sent from the ProcessQuill website.'
     ].filter(Boolean).join('\n');
     window.location.href = `mailto:processquill@gmail.com?subject=${encodeURIComponent('ProcessQuill inquiry: ' + subject)}&body=${encodeURIComponent(body)}`;
   });
