@@ -11,7 +11,7 @@ async function loadProfilePhoto(){
   const img = document.getElementById('profilePhoto');
   if(!img) return;
   try{
-    const files = Array.from({length:8},(_,i)=>`assets/profile-${i+1}.txt`);
+    const files = Array.from({length:4},(_,i)=>`assets/profile-${i+1}.txt`);
     const parts = await Promise.all(files.map(path => fetch(path).then(r => {
       if(!r.ok) throw new Error('Photo asset unavailable');
       return r.text();
