@@ -11,12 +11,11 @@ async function loadProfilePhoto(){
   const img = document.getElementById('profilePhoto');
   if(!img) return;
   try{
-    const files = Array.from({length:4},(_,i)=>`assets/profile-${i+1}.txt`);
-    const parts = await Promise.all(files.map(path => fetch(path).then(r => {
+    const base64 = await fetch('assets/profile.txt').then(r => {
       if(!r.ok) throw new Error('Photo asset unavailable');
       return r.text();
-    })));
-    img.src = 'data:image/jpeg;base64,' + parts.join('');
+    });
+    img.src = 'data:image/jpeg;base64,' + base64.trim();
     img.onload = () => img.classList.add('loaded');
   }catch(err){
     console.warn('Profile photo could not be loaded.', err);
