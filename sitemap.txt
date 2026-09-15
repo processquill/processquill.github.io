@@ -1,2 +1,13 @@
 https://processquill.github.io/
 https://processquill.github.io/certificates.html
+https://processquill.github.io/insights.html
+https://processquill.github.io/insight-iq-oq-pq.html
+https://processquill.github.io/insight-validation-report.html
+https://processquill.github.io/insight-fmea-validation.html
+https://processquill.github.io/sample-autoclave-qualification.html
+https://processquill.github.io/sample-cleanroom-hvac.html
+https://processquill.github.io/sample-aseptic-filling.html
+https://processquill.github.io/sample-risk-assessment-fmea.html
+https://processquill.github.io/sample-sterile-filtration.html
+https://processquill.github.io/sample-equipment-cleaning-sop.html
+https://processquill.github.io/privacy.html
